@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24sp">
+
+    <TextView
+        android:id="@+id/txtRowId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtRowName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Lady Gaga"
+        android:textSize="24dp"
+        app:layout_constraintStart_toEndOf="@+id/txtRowId"
+        app:layout_constraintTop_toTopOf="@+id/txtRowId" />
+
+    <TextView
+        android:id="@+id/txtRowOccupation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Singer, songwritter, actress, filantropist"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtRowId"
+        app:layout_constraintStart_toEndOf="@+id/txtRowId" />
+
+    <TextView
+        android:id="@+id/txtRowBirthdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="March, 28th 1989"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtRowOccupation"
+        app:layout_constraintStart_toEndOf="@+id/txtRowId"
+        app:layout_constraintTop_toBottomOf="@+id/txtRowName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

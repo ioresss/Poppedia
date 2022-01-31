@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Add new"
+        android:id="@+id/insertFragment"
+        android:icon="@drawable/ic_add"
+        android:iconTint="@color/black"/>
+    <item android:title="About us"
+        android:id="@+id/aboutUsFragment"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:iconTint="@color/black"/>
+</menu>
