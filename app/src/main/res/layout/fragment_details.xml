@@ -1,126 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="fragments.details.DetailsFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
+    <data>
 
-    <TextView
-        android:id="@+id/txtDetailName"
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="@string/hello_blank_fragment"
-        android:textAlignment="center"
-        android:textSize="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        tools:context="fragments.details.DetailsFragment">
 
-    <Space
-        android:id="@+id/space"
-        android:layout_width="50dp"
-        android:layout_height="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/txtDetailName"
-        app:layout_constraintStart_toStartOf="@+id/txtDetailName"
-        app:layout_constraintTop_toBottomOf="@+id/txtDetailName" />
+        <!-- TODO: Update blank fragment layout -->
 
-    <TextView
-        android:id="@+id/txtDetailBirthDate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textAlignment="textEnd"
-        app:layout_constraintEnd_toStartOf="@+id/space"
-        app:layout_constraintStart_toStartOf="@+id/txtDetailName"
-        app:layout_constraintTop_toTopOf="@+id/txtDetailWebsite" />
+        <TextView
+            android:id="@+id/txtDetailName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:text="@string/hello_blank_fragment"
+            android:textAlignment="center"
+            android:textSize="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtDetailWebsite"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="TextView"
-        android:textAlignment="textStart"
-        app:layout_constraintEnd_toEndOf="@+id/txtDetailName"
-        app:layout_constraintStart_toEndOf="@+id/space"
-        app:layout_constraintTop_toBottomOf="@+id/txtDetailName" />
+        <Space
+            android:id="@+id/space"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtDetailName"
+            app:layout_constraintStart_toStartOf="@+id/txtDetailName"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetailName" />
 
-    <Space
-        android:id="@+id/space2"
-        android:layout_width="0dp"
-        android:layout_height="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/txtDetailWebsite"
-        app:layout_constraintStart_toStartOf="@+id/txtDetailBirthDate"
-        app:layout_constraintTop_toBottomOf="@+id/txtDetailBirthDate" />
+        <TextView
+            android:id="@+id/txtDetailBirthDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toStartOf="@+id/space"
+            app:layout_constraintStart_toStartOf="@+id/txtDetailName"
+            app:layout_constraintTop_toTopOf="@+id/txtDetailWebsite" />
 
-    <TextView
-        android:id="@+id/txtDetailOccupation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/txtDetailName"
-        app:layout_constraintStart_toStartOf="@+id/txtDetailName"
-        app:layout_constraintTop_toBottomOf="@+id/space2" />
+        <TextView
+            android:id="@+id/txtDetailWebsite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="TextView"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="@+id/txtDetailName"
+            app:layout_constraintStart_toEndOf="@+id/space"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetailName" />
 
-    <Space
-        android:id="@+id/space3"
-        android:layout_width="0dp"
-        android:layout_height="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/txtDetailName"
-        app:layout_constraintStart_toStartOf="@+id/txtDetailName"
-        app:layout_constraintTop_toBottomOf="@+id/txtDetailOccupation" />
+        <Space
+            android:id="@+id/space2"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtDetailWebsite"
+            app:layout_constraintStart_toStartOf="@+id/txtDetailBirthDate"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetailBirthDate" />
 
-    <TextView
-        android:id="@+id/txtDetailDescription"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="64dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/space4"
-        app:layout_constraintEnd_toEndOf="@+id/txtDetailName"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txtDetailName"
-        app:layout_constraintTop_toBottomOf="@+id/space3"
-        app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/txtDetailOccupation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/txtDetailName"
+            app:layout_constraintStart_toStartOf="@+id/txtDetailName"
+            app:layout_constraintTop_toBottomOf="@+id/space2" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingBtnEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:clickable="true"
-        app:backgroundTint="#FF9800"
-        app:layout_constraintEnd_toEndOf="@+id/space4"
-        app:layout_constraintTop_toBottomOf="@+id/space4"
-        app:srcCompat="@drawable/ic_baseline_edit_24" />
+        <Space
+            android:id="@+id/space3"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtDetailName"
+            app:layout_constraintStart_toStartOf="@+id/txtDetailName"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetailOccupation" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingBtnDelete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:clickable="true"
-        app:backgroundTint="#F44336"
-        app:layout_constraintBottom_toBottomOf="@+id/floatingBtnEdit"
-        app:layout_constraintStart_toStartOf="@+id/space4"
-        app:layout_constraintTop_toTopOf="@+id/floatingBtnEdit"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_baseline_delete_24" />
+        <TextView
+            android:id="@+id/txtDetailDescription"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="64dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/space4"
+            app:layout_constraintEnd_toEndOf="@+id/txtDetailName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txtDetailName"
+            app:layout_constraintTop_toBottomOf="@+id/space3"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <Space
-        android:id="@+id/space4"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="124dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingBtnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            app:backgroundTint="#FF9800"
+            app:layout_constraintEnd_toEndOf="@+id/space4"
+            app:layout_constraintTop_toBottomOf="@+id/space4"
+            app:srcCompat="@drawable/ic_baseline_edit_24" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingBtnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:clickable="true"
+            app:backgroundTint="#F44336"
+            app:layout_constraintBottom_toBottomOf="@+id/floatingBtnEdit"
+            app:layout_constraintStart_toStartOf="@+id/space4"
+            app:layout_constraintTop_toTopOf="@+id/floatingBtnEdit"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+        <Space
+            android:id="@+id/space4"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="124dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

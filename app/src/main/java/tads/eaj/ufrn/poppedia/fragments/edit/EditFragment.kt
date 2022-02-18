@@ -1,40 +1,61 @@
 package tads.eaj.ufrn.poppedia.fragments.edit
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.navArgs
+import androidx.navigation.ui.NavigationUI
 import tads.eaj.ufrn.poppedia.R
 import tads.eaj.ufrn.poppedia.data.Celeb
+import tads.eaj.ufrn.poppedia.databinding.FragmentEditBinding
 import tads.eaj.ufrn.poppedia.fragments.details.DetailsFragmentArgs
-import tads.eaj.ufrn.poppedia.fragments.details.DetailsViewModel
 import tads.eaj.ufrn.poppedia.fragments.dialogs.EditDialog
 import java.text.SimpleDateFormat
-import java.util.*
 
 
 class EditFragment : Fragment() {
 
-    private lateinit var editViewModel : EditViewModel
+    lateinit var editViewModel : EditViewModel
+    lateinit var binding: FragmentEditBinding
+
+
+
     override fun onCreateView(
+
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
+
         setHasOptionsMenu(true)
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_edit, container, false)
-        val args: DetailsFragmentArgs by navArgs()
-        editViewModel = ViewModelProvider(this).get(EditViewModel::class.java)
-        editViewModel.findCeleb(args.id).observe(viewLifecycleOwner, Observer {
+
+        val args: EditFragmentArgs by navArgs()
+
+        binding  = DataBindingUtil.inflate(inflater, R.layout.fragment_edit, container, false)
+        val viewModelFactory = EditViewModel.Factory(requireActivity().application, args.id)
+
+        editViewModel = ViewModelProvider(this, viewModelFactory).get(EditViewModel::class.java)
+        binding.lifecycleOwner = this
+        binding.viewmodel= editViewModel
+
+        editViewModel.eventUpdateCeleb.observe(viewLifecycleOwner, {
+            if(it){
+                Navigation.findNavController(requireView()).navigate(EditFragmentDirections.actionEditFragmentToListFragment())
+            }
+        })
+
+        /*editViewModel.findCeleb(args.id).observe(viewLifecycleOwner, Observer {
             view.findViewById<TextView>(R.id.txtEditName).text = it.name
             view.findViewById<TextView>(R.id.txtEditWebsite).text = it.website
             view.findViewById<TextView>(R.id.txtEditOccupation).text = it.occupation
@@ -65,10 +86,10 @@ class EditFragment : Fragment() {
                 Toast.makeText(requireContext(), "Cannot update celebrity. Please, fill out all fields!", Toast.LENGTH_LONG).show()
             }
 
-        }
+        }*/
 
 
-        return view
+        return binding.root
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {

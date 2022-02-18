@@ -10,7 +10,7 @@ import tads.eaj.ufrn.poppedia.dao.CelebDatabase
 import tads.eaj.ufrn.poppedia.dao.CelebRepository
 import tads.eaj.ufrn.poppedia.data.Celeb
 
-class ListViewModel(application: Application) : AndroidViewModel(application) {
+class ListViewModel(application: Application, id: Long) : AndroidViewModel(application) {
      val readAllCelebs : LiveData<List<Celeb>>
 
     private val repository: CelebRepository
